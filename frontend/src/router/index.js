@@ -21,6 +21,11 @@ const router = createRouter({
       component: TransactionFormView,
       props: true,
     },
+    {
+      path: '/references',
+      name: 'references',
+      component: () => import('@/views/ReferencesView.vue'),
+    },
   ],
 })
 

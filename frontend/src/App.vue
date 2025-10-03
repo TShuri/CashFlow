@@ -4,6 +4,7 @@
       <div class="container">
         <a class="navbar-brand" href="#">CashFlow</a>
         <div class="navbar-nav">
+          <router-link to="/references" class="nav-link">Справочники</router-link>
           <router-link to="/" class="nav-link">Транзакции</router-link>
           <router-link to="/create" class="nav-link">Добавить</router-link>
         </div>

@@ -20,7 +20,7 @@ export const useTransactionsStore = defineStore('transactions', {
           referencesAPI.getStatuses(),
           referencesAPI.getTypes(),
           referencesAPI.getCategories(),
-          referencesAPI.getSubcategories()
+          referencesAPI.getSubcategories(),
         ])
         this.statuses = statusesRes.data.results || statusesRes.data
         this.types = typesRes.data.results || typesRes.data
@@ -74,13 +74,13 @@ export const useTransactionsStore = defineStore('transactions', {
 
     // Загрузка конкретной транзакции
     async loadTransaction(id) {
-        try {
-            const response = await transactionsAPI.getById(id)
-            return response.data
-        } catch (error) {
-            this.error = error.message
-            throw error
-        }
+      try {
+        const response = await transactionsAPI.getById(id)
+        return response.data
+      } catch (error) {
+        this.error = error.message
+        throw error
+      }
     },
 
     // Создание транзакции
@@ -114,7 +114,7 @@ export const useTransactionsStore = defineStore('transactions', {
         this.error = error.message
         throw error
       }
-    }
+    },
   },
 
   getters: {

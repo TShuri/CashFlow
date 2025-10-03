@@ -26,6 +26,23 @@ export const referencesAPI = {
   getCategories: (typeId) => api.get('/categories/', { params: { type: typeId } }),
   getSubcategories: (categoryId) =>
     api.get('/subcategories/', { params: { category: categoryId } }),
+
+  // CRUD методы
+  createStatus: (data) => api.post('/statuses/', data),
+  updateStatus: (id, data) => api.put(`/statuses/${id}/`, data),
+  deleteStatus: (id) => api.delete(`/statuses/${id}/`),
+
+  createType: (data) => api.post('/types/', data),
+  updateType: (id, data) => api.put(`/types/${id}/`, data),
+  deleteType: (id) => api.delete(`/types/${id}/`),
+
+  createCategory: (data) => api.post('/categories/', data),
+  updateCategory: (id, data) => api.put(`/categories/${id}/`, data),
+  deleteCategory: (id) => api.delete(`/categories/${id}/`),
+
+  createSubcategory: (data) => api.post('/subcategories/', data),
+  updateSubcategory: (id, data) => api.put(`/subcategories/${id}/`, data),
+  deleteSubcategory: (id) => api.delete(`/subcategories/${id}/`),
 }
 
 export default api
