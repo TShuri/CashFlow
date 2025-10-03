@@ -57,7 +57,7 @@
 
 ```bash
 # Клонирование репозитория
-git clone <repository-url>
+git clone https://github.com/TShuri/CashFlow.git
 cd CashFlow
 
 # Запуск всех сервисов
