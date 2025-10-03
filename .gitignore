@@ -17,7 +17,7 @@ venv/
 .python-version
 
 # Poetry
-poetry.lock
+# poetry.lock
 
 # ========== Frontend (Vue) ==========
 # Logs

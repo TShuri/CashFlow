@@ -61,7 +61,7 @@ git clone https://github.com/TShuri/CashFlow.git
 cd CashFlow
 
 # Запуск всех сервисов
-docker-compose up --build
+docker-compose up --build -d
 ```
 
 ### Доступ к приложению
@@ -71,6 +71,13 @@ docker-compose up --build
 
 - Backend API: http://localhost:8000/api
 
+### Для доступа в Admin panel нужно создать суперпользователя
+
+```bash
+docker-compose exec backend python manage.py createsuperuser
+```
+
+Задать логин и пароль, и затем под этими данными авторизоваться в админ-панеле 
 - Admin panel: http://localhost:8000/admin
 
 
