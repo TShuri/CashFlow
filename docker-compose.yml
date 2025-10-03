@@ -27,14 +27,14 @@ services:
       POSTGRES_USER: dds_user
       POSTGRES_PASSWORD: dds_password
 
-  # frontend:
-  #   build:
-  #     context: ./frontend
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "80:80"
-  #   depends_on:
-  #     - backend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
 
 volumes:
   postgres_data:
